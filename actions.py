@@ -14,7 +14,7 @@ def print_stores():
     # your code goes here!
     for store in stores:
    
-   print("- %s" % store.name)
+         print("- %s" % store.name)
         
 
 def get_store(store_name):
@@ -23,8 +23,9 @@ def get_store(store_name):
     """
     # your code goes here!
     for store in stores:
-        if store.name.lower() = store_name.lower():
-            return store
+         if store.name.lower() == store_name.lower():
+             return store
+
     return false 
 
 def pick_store():
@@ -61,12 +62,12 @@ def pick_products(cart, picked_store):
     while use_input.lower() != "back":
         for product in picked_store.products:
 
-            if user_input.lower() == product.name.lower()
+            if user_input.lower() == product.name.lower():
                card.add_to_cart(product)
-            user_input = input()
+               user_input = input()
 
 
-   return user_input
+    return user_input
 
 
 def shop():
@@ -74,21 +75,17 @@ def shop():
     The main shopping functionality
     """
     cart = Cart()
-    # your code goes here!
     user_input = ""
-    while user_input.lowe() != "checkout":
+    while user_input.lower() != "checkout":
         user_input = ""
         picked_store = pick_store()
         if picked_store == "checkout":
             break
-            
+
         picked_store.print_products()
         user_input = pick_products(cart, picked_store)
 
-
-
-
-
+        cart.checkout()
 
 def thank_you():
     print("Thank you for shopping with us at %s" % site_name)

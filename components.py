@@ -96,7 +96,7 @@ class Cart():
 
         self.print_recipt()
         confirm = input("Confirm ? (yes/no)")
-        if confirm.lower() = "yes":
+        if confirm.lower() == "yes":
             self.products=[]
             print("Your order has been accepted")
         else:
